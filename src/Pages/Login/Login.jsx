@@ -10,7 +10,7 @@ const Login = () => {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [register, setRegsiter] = useState(false);
-  const [signin, setSignin] = useState(false);
+  const [signin, setSignin] = useState(true);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [passwords, setPasswords] = useState("");
@@ -50,8 +50,9 @@ const Login = () => {
  
  
 
-  const handlesign = () => {
-    nav("/");
+  const handleRegistration = () => {
+    setRegsiter(true)
+    setSignin(false)
   };
 
   const handleRegister = async (e) => {
@@ -84,9 +85,15 @@ const Login = () => {
 
   if (onSuccess) {
   }
+  const handlesign = ()=>{
+    setSignin(true)
+    setRegsiter(false)
+    }
+
   return (
     
    { signin ? 
+
    <Box
       sx={{
         height: "100vh",
@@ -184,7 +191,7 @@ const Login = () => {
               >
                 Didn't Registered yet?
                 <span
-                  onClick={handleRegister}
+                  onClick={handleRegistration}
                   style={{
                     color: "blue",
                     fontWeight: "bold",
@@ -209,7 +216,7 @@ const Login = () => {
         </Box>
       </Box>
     </Box> : 
-   <Box
+(   <Box
    sx={{
      width: "100vw",
      height: "100vh",
@@ -336,7 +343,7 @@ const Login = () => {
        </form>
      </Box>
    </Box>
- </Box>  
+ </Box> ) 
   }
   );
 };
