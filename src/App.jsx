@@ -9,7 +9,7 @@ import Bookmarks from "./Pages/Bookmarks/Bookmarks";
 import Communities from "./Pages/Communities/Communities";
 import Courses from "./Pages/Courses/Courses";
 import Podcasts from "./Pages/Podcasts/Podcasts";
-
+import MoreInfo from "./Pages/Courses/MoreInfo";
 function App() {
   return (
     <>
@@ -21,6 +21,7 @@ function App() {
         <Route path="/bookmarks" element={<Bookmarks />} />
         <Route path="/communities" element={<Communities />} />
         <Route path="/courses" element={<Courses />} />
+        {/* <Route path={`/details/${id}`} element={<MoreInfo />} /> */}
         <Route path="/podcasts" element={<Podcasts />} />
       </Routes>
     </>
