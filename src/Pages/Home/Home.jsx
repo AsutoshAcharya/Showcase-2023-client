@@ -10,6 +10,7 @@ import {
   Skeleton,
   Grid,
   Divider,
+  Avatar,
 } from "@mui/material";
 import axios from "axios";
 import React from "react";
@@ -26,6 +27,8 @@ import { BsBookmarkFill as BookmarkFillIcon } from "react-icons/bs";
 import { PuffLoader } from "react-spinners";
 import { motion } from "framer-motion";
 import Moment from "react-moment";
+import AvatarGenerator from "../../utils/AvatarGenerator";
+
 // import Moment from "moment";
 function Home() {
   const [open, setOpen] = React.useState(false);
@@ -64,7 +67,7 @@ function Home() {
           Authorization: import.meta.env.SHOWWCASE_API_KEY,
         },
       });
-      console.log(data);
+      // console.log(data);
       return data;
     } catch (error) {
       throw Error("Unable to fetch Feeds");
@@ -173,19 +176,14 @@ function Home() {
                     // overflow: "hidden",
                   }}
                 >
-                  <img
-                    src={post.user && post.user.profilePictureKey}
-                    alt="user image"
-                    width="50"
-                    height="50"
-                    style={{
-                      aspectRatio: "1",
-                      objectFit: "cover",
-                      borderRadius: "100%",
-                      // minWidth:'2rem'
-                      // objectPosition:'top'
+                  <Avatar
+                    sx={{
+                      bgcolor: "#1f53e0",
                     }}
-                  />
+                  >
+                    {AvatarGenerator(post.user.displayName)}
+                  </Avatar>
+
                   <Box sx={{ flex: "1", width: "100%" }}>
                     {/* top section of the post  */}
                     <Box sx={{ width: "100%" }}>
