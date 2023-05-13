@@ -78,14 +78,14 @@ function Work() {
                 // background: "linear-gradient(to right, #FFF, #171718)",
               }}
             >
-              <Avatar width="20%">img</Avatar>
+              <Avatar width="20%">{rec?.company?.logo}</Avatar>
               <Stack width="80%">
                 <Stack
                   direction="row"
                   justifyContent="space-between"
                   alignItems="center"
                 >
-                  <Typography color="#FFF">Name</Typography>
+                  <Typography color="#FFF">{rec?.title}</Typography>
                   <Tooltip placement="bottom" title="Save Job">
                     <IconButton>
                       <BookmarkIcon color="gray" size="1.2rem" />
@@ -93,7 +93,7 @@ function Work() {
                   </Tooltip>
                 </Stack>
                 <Typography color="#268bff" fontSize={20}>
-                  Position
+               {rec?.role?.name}
                 </Typography>
                 <Stack direction="row" width="100%" gap={1}>
                   <Stack direction="row" gap={1}>
@@ -103,7 +103,7 @@ function Work() {
                         color: "gray",
                       }}
                     />
-                    <Typography color="#8fb097">Location</Typography>
+                    <Typography color="#8fb097">{rec?.location}</Typography>
                   </Stack>
                   <Stack direction="row" gap={1}>
                     <WorkIcon
@@ -111,7 +111,7 @@ function Work() {
                         color: "gray",
                       }}
                     />
-                    <Typography color="#8fb097">Full Time</Typography>
+                    <Typography color="#8fb097">{rec?.type}</Typography>
                   </Stack>
                   <Stack direction="row" gap={1}>
                     <LocalAtmIcon
@@ -119,11 +119,11 @@ function Work() {
                         color: "gray",
                       }}
                     />
-                    <Typography color="#8fb097">$250</Typography>
+                    <Typography color="#8fb097"> from ${rec?.salary.from} to ${rec?.salary.to} {rec?.salary.currency}</Typography>
                   </Stack>
                   <Stack direction="row" alignItems="center">
                     <DotIcon color="gray" size="1.2rem" />
-                    <Typography color="#8fb097">posted on 10 May</Typography>
+                    <Typography color="#8fb097">{rec?.createdAt}</Typography>
                   </Stack>
                 </Stack>
               </Stack>

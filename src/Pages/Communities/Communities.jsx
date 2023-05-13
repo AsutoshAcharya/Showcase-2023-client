@@ -2,7 +2,8 @@ import React from 'react'
 
 function Communities() {
   return (
-    <div>Communities</div>
+    <div>This feature is comming soon
+    </div>
   )
 }
 

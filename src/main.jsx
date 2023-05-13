@@ -23,7 +23,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+
     <Router>
       {/* <ThemeProvider> */}
       <QueryClientProvider client={queryClient}>
@@ -32,5 +32,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       </QueryClientProvider>
       {/* </ThemeProvider> */}
     </Router>
-  </React.StrictMode>
+ 
 );

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Bookmarks() {
   return (
-    <div>Bookmarks</div>
+    <div>To be Added</div>
   )
 }
 
