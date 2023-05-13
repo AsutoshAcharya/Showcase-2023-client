@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react'
 
-function Podcasts() {
-  return <div>Podcasts</div>;
+const Podcasts = () => {
+  return (
+    <div>Podcasts</div>
+  )
 }
 
-export default Podcasts;
+export default Podcasts
