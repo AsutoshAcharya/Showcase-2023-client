@@ -93,7 +93,7 @@ function Work() {
                   </Tooltip>
                 </Stack>
                 <Typography color="#268bff" fontSize={20}>
-               {rec?.role?.name}
+                  {rec?.role?.name}
                 </Typography>
                 <Stack direction="row" width="100%" gap={1}>
                   <Stack direction="row" gap={1}>
@@ -119,7 +119,11 @@ function Work() {
                         color: "gray",
                       }}
                     />
-                    <Typography color="#8fb097"> from ${rec?.salary.from} to ${rec?.salary.to} {rec?.salary.currency}</Typography>
+                    <Typography color="#8fb097">
+                      {" "}
+                      from ${rec?.salary.from} to ${rec?.salary.to}{" "}
+                      {rec?.salary.currency}
+                    </Typography>
                   </Stack>
                   <Stack direction="row" alignItems="center">
                     <DotIcon color="gray" size="1.2rem" />
