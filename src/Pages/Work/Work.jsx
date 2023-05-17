@@ -120,7 +120,7 @@ function Work() {
                       }}
                     />
                     <Typography color="#8fb097">
-                      {" "}
+               
                       from ${rec?.salary.from} to ${rec?.salary.to}{" "}
                       {rec?.salary.currency}
                     </Typography>

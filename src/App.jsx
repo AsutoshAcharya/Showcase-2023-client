@@ -10,12 +10,14 @@ import Communities from "./Pages/Communities/Communities";
 import Courses from "./Pages/Courses/Courses";
 import Podcasts from "./Pages/Podcasts/Podcasts";
 import MoreInfo from "./Pages/Courses/MoreInfo";
+import Login from "./Pages/Login/Login";
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} exact />
+        <Route path="/" element={<Login />} exact />
+        <Route path="/home"  element={<Home />} exact />
         <Route path="/explore" element={<Explore />} />
         <Route path="/work" element={<Work />} />
         <Route path="/bookmarks" element={<Bookmarks />} />
