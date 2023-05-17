@@ -1,6 +1,6 @@
 import { Box, Typography, TextField, Button } from "@mui/material";
 import React, { useState } from "react";
-import loginlogo from "../Assets/super-bike-like-kawasaki.jpg";
+import Logoss from "../../assets/Logoss.png";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useMutation } from "react-query";
@@ -32,7 +32,7 @@ const Login = () => {
         })
         .then((res) => {
           console.log(res);
-          nav("/dashboard");
+          nav("/home");
         })
         .catch((err) => console.log(err));
     } catch (error) {
@@ -42,9 +42,9 @@ const Login = () => {
 
   const { data: loginData } = useMutation("signin", handleSignIn);
 
-  if (data) {
-    console.log(data);
-  }
+  // if (data) {
+  //   console.log(data);
+  // }
 
   const handleRegistration = () => {
     setRegsiter(true);
@@ -202,7 +202,7 @@ const Login = () => {
             </Box>
             <Box sx={{ width: "50%", height: "100%" }}>
               <img
-                src={loginlogo}
+                src={Logoss}
                 width="480"
                 height="490"
                 objectFit="cover"
