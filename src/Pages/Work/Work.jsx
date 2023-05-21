@@ -8,7 +8,7 @@ import {
   IconButton,
 } from "@mui/material";
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { PuffLoader } from "react-spinners";
 import { BsDot as DotIcon } from "react-icons/bs";
@@ -16,7 +16,11 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import WorkIcon from "@mui/icons-material/Work";
 import { BsBookmark as BookmarkIcon } from "react-icons/bs";
 import LocalAtmIcon from "@mui/icons-material/LocalAtm";
-function Work() {
+import { useNavigate } from "react-router-dom";
+
+const Work = () => {
+  const [singleWork, setSingleWork] = useState({});
+  const navigate = useNavigate();
   const getReccomendedJobs = async () => {
     // const url = "https://cache.showwcase.com/jobs/recommended";
     try {
@@ -28,7 +32,7 @@ function Work() {
           // },
         }
       );
-      console.log(data);
+      // console.log(data);
       return data;
     } catch (error) {
       throw Error("Unable to fetch reccomended");
@@ -42,7 +46,9 @@ function Work() {
     isError,
   } = useQuery("reccomended-jobs", getReccomendedJobs, {
     onError: () => {},
+    refetchOnWindowFocus: false,
   });
+
   return (
     <Box sx={{ background: "#171718", minHeight: "100vh", padding: "2rem 0" }}>
       <Stack width="40%" height={30} mx="auto">
@@ -60,22 +66,19 @@ function Work() {
             flexFlow: "column",
             alignItems: "center",
             gap: "1rem",
-            // margin: "2rem auto",
-            // background: "",
           }}
         >
-          {reccomended?.map((rec) => (
+          {reccomended?.map((rec, idx) => (
             <Stack
+              key={idx}
               direction="row"
               width="60%"
               alignItems="center"
               gap={1}
               sx={{
-                // border: "2px solid cyan",
                 borderRadius: "12px",
                 p: 1,
                 backgroundColor: "black",
-                // background: "linear-gradient(to right, #FFF, #171718)",
               }}
             >
               <Avatar width="20%">{rec?.company?.logo}</Avatar>
@@ -85,7 +88,19 @@ function Work() {
                   justifyContent="space-between"
                   alignItems="center"
                 >
-                  <Typography color="#FFF">{rec?.title}</Typography>
+                  <Typography
+                    color="#FFF"
+                    sx={{
+                      cursor: "pointer",
+                    }}
+                    onClick={() => {
+                      console.log(rec);
+                      navigate(`/work?${rec.id}`);
+                      setSingleWork(rec);
+                    }}
+                  >
+                    {rec?.title}
+                  </Typography>
                   <Tooltip placement="bottom" title="Save Job">
                     <IconButton>
                       <BookmarkIcon color="gray" size="1.2rem" />
@@ -120,8 +135,7 @@ function Work() {
                       }}
                     />
                     <Typography color="#8fb097">
-               
-                      from ${rec?.salary.from} to ${rec?.salary.to}{" "}
+                      from ${rec?.salary.from} to ${rec?.salary.to}
                       {rec?.salary.currency}
                     </Typography>
                   </Stack>
@@ -137,6 +151,6 @@ function Work() {
       )}
     </Box>
   );
-}
+};
 
 export default Work;
