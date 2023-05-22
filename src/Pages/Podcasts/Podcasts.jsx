@@ -3,6 +3,7 @@ import { Box,Typography,Stack,Grid, Card, CardContent, } from '@mui/material';
 
 
 
+
 const Podcasts = () => {
   const cards = [
   { title: 'Card 1', description: 'This is card 1.' },
@@ -31,7 +32,7 @@ const Podcasts = () => {
     <Grid container spacing={2}>
       {cards.map((card, index) => (
         <Grid item xs={12} sm={6} md={3} key={index}>
-          <Card sx={{height:'16rem'}}>
+          <Card  sx={{height:'16rem', boxShadow:1}}>
             <CardContent>
               <Typography variant="h5" component="div">
                 {card.title}
@@ -44,6 +45,10 @@ const Podcasts = () => {
         </Grid>
       ))}
     </Grid>
+
+    <Box>
+      <Typography>Featured Shows</Typography>
+    </Box>
     </Box>
   )
 }
