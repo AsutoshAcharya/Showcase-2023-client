@@ -1,9 +1,10 @@
 import React from "react";
 import { Stack } from "@mui/material";
-const SingleWork = () => {
+const SingleWork = ({ singleWork }) => {
+  console.log(singleWork);
   return (
-    <Stack color="#FFF" width="100%" height="100%">
-      ad
+    <Stack width={500} height={300}>
+      hello user
     </Stack>
   );
 };
