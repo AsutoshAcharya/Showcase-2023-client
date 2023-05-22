@@ -1,12 +1,14 @@
 import "/src/index.css";
-const ChatStripe = (isAi, value, uniqueId) => {
+import bot from "/src/assets/bot.svg";
+import user from "/src/assets/user.svg";
+const ChatStripe = ({ isAi, value, uniqueId }) => {
   return (
     <div className={"wrapper" + isAi && " ai"}>
-      <div class="chat">
-        <div class="profile">
+      <div className="chat">
+        <div className="profile">
           <img src={isAi ? bot : user} alt="${isAi ? 'bot' : 'user'}" />
         </div>
-        <div class="message" id={uniqueId}>
+        <div className="message" id={uniqueId}>
           {value}
         </div>
       </div>
