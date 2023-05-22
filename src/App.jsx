@@ -12,9 +12,10 @@ import Podcasts from "./Pages/Podcasts/Podcasts";
 import MoreInfo from "./Pages/Courses/MoreInfo";
 import Login from "./Pages/Login/Login";
 import Chat from "./Pages/Chat/Chat";
+import { Stack } from "@mui/material";
 function App() {
   return (
-    <>
+    <Stack width="100vw" height="100vh">
       <Navbar />
       <Routes>
         <Route path="/" element={<Login />} exact />
@@ -28,7 +29,7 @@ function App() {
         {/* <Route path={`/details/${id}`} element={<MoreInfo />} /> */}
         <Route path="/podcasts" element={<Podcasts />} />
       </Routes>
-    </>
+    </Stack>
   );
 }
 

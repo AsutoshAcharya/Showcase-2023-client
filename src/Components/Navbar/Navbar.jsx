@@ -78,7 +78,7 @@ function Navbar() {
   };
 
   return (
-    <header style={{ background: "Black" }}>
+    <header style={{ background: "Black", height: "7%" }}>
       <Stack
         direction={"row"}
         justifyContent={"space-between"}
@@ -108,7 +108,7 @@ function Navbar() {
         {/* Nav Links  */}
         <Stack direction="row" spacing={3} sx={{ height: "100%" }}>
           {Navs &&
-            Navs.map((nav,index) => (
+            Navs.map((nav, index) => (
               <NavLink
                 to={nav.route}
                 key={index}
