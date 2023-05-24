@@ -18,8 +18,8 @@ function App() {
     <Stack width="100vw" height="100vh">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Login />} exact />
-        <Route path="/home" element={<Home />} exact />
+        <Route path="/" element={<Home />} exact />
+        {/* <Route path="/home" element={<Home />} exact /> */}
         <Route path="/explore" element={<Explore />} />
         <Route path="/work" element={<Work />} />
         <Route path="/work/chat" element={<Chat />} />
