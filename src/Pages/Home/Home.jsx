@@ -121,10 +121,10 @@ function Home() {
   return (
     <>
       <Box
-        sx={{ background: "#171718", minHeight: "100vh", padding: "2rem 0" }}
+        sx={{ background: "#171718",padding: "2rem 0" }}
       >
         {isLoading ? (
-          <Stack justifyContent="center" alignItems="center" minHeight="100vh">
+          <Stack justifyContent="center" alignItems="center" height="100%">
             <PuffLoader color="#36d7b7" />
           </Stack>
         ) : (
@@ -147,12 +147,13 @@ function Home() {
           //   </Box>
           // </Box>
           <Container
-            maxWidth="lg"
+            // maxWidth="lg"
             sx={{
               display: "flex",
               flexFlow: "column",
               alignItems: "center",
               gap: "1rem",
+              height:"100%"
               // margin: "2rem auto",
               // background: "",
             }}

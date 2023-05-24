@@ -22,7 +22,7 @@ function Courses() {
       name: "HTML",
       created_by: "Dave Gray",
       desc: "HTML stands for Hyper Text Markup Language. HTML is the standard markup language for creating Web pages. HTML describes the structure of a Web page. HTML consists of a series of elements. HTML elements tell the browser how to display the content.",
-      url: "https://youtu.be/kUMe1FH4CHE",
+      url: "https://www.youtube.com/embed/kUMe1FH4CHE",
       route: "/details/1",
     },
     {
@@ -30,7 +30,7 @@ function Courses() {
       name: "CSS",
       created_by: "Dave Gray",
       desc: "CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once. External stylesheets are stored in CSS files.",
-      url: "https://youtu.be/OXGznpKZ_sA",
+      url: "https://www.youtube.com/embed/OXGznpKZ_sA",
       route: "/details/2",
     },
     {
@@ -38,7 +38,7 @@ function Courses() {
       name: "JavaScript",
       created_by: "John Smilga",
       desc: "JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB.",
-      url: "https://youtu.be/jS4aFq5-91M",
+      url:"https://www.youtube.com/embed/jS4aFq5-91M",
       route: "/details/3",
     },
     {
@@ -46,7 +46,7 @@ function Courses() {
       name: "Python",
       created_by: "Beau Carnes",
       desc: "Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis. Python is a general-purpose language, meaning it can be used to create a variety of different programs and isnt specialized for any specific problems",
-      url: "https://youtu.be/eWRfhZUzrAc",
+      url: "https://www.youtube.com/embed/rfscVS0vtbw",
       route: "/details/4",
     },
     {
@@ -54,7 +54,7 @@ function Courses() {
       name: "React JS",
       created_by: "Coding Addict",
       desc: "React is a JavaScript-based UI development library. Facebook and an open-source developer community run it. Although React is a library rather than a language, it is widely used in web development. The library first appeared in May 2013.",
-      url: "https://youtu.be/2-crBg6wpp0",
+      url: "https://www.youtube.com/embed/bMknfKXIFA8",
       route: "/details/5",
     },
     {
@@ -62,7 +62,7 @@ function Courses() {
       name: "Node JS",
       created_by: "John Smilga",
       desc: "Node is an open source, cross-platform runtime environment for executing JavaScript code. Node is used extensively for server-side programming, making it possible for developers to use JavaScript for client-side and server-side code without needing to learn an additional language.",
-      url: "https://youtu.be/Oe421EPjeBE",
+      url: "https://www.youtube.com/embed/Oe421EPjeBE",
       route: "/details/6",
     },
     {
@@ -70,7 +70,7 @@ function Courses() {
       name: "Go Programming",
       created_by: "Boot.dev",
       desc: "Go, also called Golang or Go language, is an open source programming language that Google developed. Software developers use Go in an array of operating systems and frameworks to develop web applications, cloud and networking services, and other types of software.",
-      url: "https://youtu.be/un6ZyFkqFKo",
+      url: "https://www.youtube.com/embed/un6ZyFkqFKo",
       route: "/details/7",
     },
     {
