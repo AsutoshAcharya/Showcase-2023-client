@@ -79,6 +79,7 @@ const Work = () => {
           border: "2px solid #FFF",
           color: "grey",
           width: "300px",
+          display: "none",
         }}
       />
       {isLoading ? (
@@ -129,7 +130,8 @@ const Work = () => {
                       setSingleWork(rec);
                     }}
                   >
-                    {rec?.title}
+                    {/*rec?.title*/}
+                    {rec?.company?.name}
                   </Typography>
                   <Tooltip placement="bottom" title="Save Job">
                     <IconButton>
@@ -186,15 +188,22 @@ const Work = () => {
         </Stack>
       )}
 
-      <Dialog
-        open={open}
-        TransitionComponent={Transition}
-        keepMounted
-        onClose={() => setOpen(false)}
-        aria-describedby="alert-dialog-slide-description"
-      >
-        <SingleWork singleWork={singleWork} />
-      </Dialog>
+      {singleWork?.length !== 0 && (
+        <Dialog
+          open={open}
+          TransitionComponent={Transition}
+          keepMounted
+          onClose={() => setOpen(false)}
+          aria-describedby="alert-dialog-slide-description"
+          sx={{
+            "& .MuiPaper-root": {
+              maxWidth: 900,
+            },
+          }}
+        >
+          <SingleWork singleWork={singleWork} />
+        </Dialog>
+      )}
     </Stack>
   );
 };
