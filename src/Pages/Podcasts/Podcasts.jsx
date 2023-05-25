@@ -86,21 +86,40 @@ const Podcasts = () => {
         direction="row"
       >
         <Box>
-          <Typography fontSize="1.6rem" color='black' fontWeight="600" >Podcasts</Typography>
+          <Typography fontSize="1.6rem" color="black" fontWeight="600">
+            Podcasts
+          </Typography>
         </Box>
         <Box>
-          <Typography fontSize="1.2rem" color='black' fontWeight="500">Suggest a Podcast</Typography>
+          <Typography fontSize="1.2rem" color="black" fontWeight="500">
+            Suggest a Podcast
+          </Typography>
         </Box>
       </Stack>
       <Box>
-        <Typography fontSize="1.2rem"  fontWeight="500" color='blue' sx={{ paddingLeft: "6px", mt: ".8rem" }}>
+        <Typography
+          fontSize="1.2rem"
+          fontWeight="500"
+          color="blue"
+          sx={{ paddingLeft: "6px", mt: ".8rem" }}
+        >
           Latest Episodes
         </Typography>
       </Box>
       <Grid container spacing={2}>
         {cards.map((card, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
-            <Card sx={{ height: "16rem", boxShadow: 1 }}>
+            <Card
+              sx={{
+                height: "16rem",
+                boxShadow: 1,
+                ":hover": {
+                  border: "1px dotted red",
+                  transform: "scale(1.05)",
+                  transition: "transform 330ms ease-in-out",
+                },
+              }}
+            >
               <CardContent>
                 <img src={card.img} alt="dd" height="150" width="100%" />
               </CardContent>
