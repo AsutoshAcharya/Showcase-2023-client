@@ -65,16 +65,20 @@ const Chat = () => {
     // chatContainer.scrollTop = chatContainer.scrollHeight;
     // const messageDiv = document.getElementById(uniqueId);
     // loader(messageDiv);
-
-    const response = await fetch("http://localhost:8800/chat", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        prompt: message,
-      }),
-    });
+    //https://weary-rugby-shirt-newt.cyclic.app/chat
+    //http://localhost:8800/chat
+    const response = await fetch(
+      "https://weary-rugby-shirt-newt.cyclic.app/chat",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          prompt: message,
+        }),
+      }
+    );
 
     // clearInterval(loadInterval)
     // messageDiv.innerHTML = " "
