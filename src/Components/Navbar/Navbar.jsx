@@ -200,10 +200,10 @@ function Navbar() {
                     color="initial"
                     sx={{ fontSize: ".9rem", fontWeight: "700" }}
                   >
-                    Bijay Kumar Naik
+                    Asutosh Acharya
                   </Typography>
                   <Typography variant="caption" color="gray">
-                    @kruzader-victor
+                    @kgreetos
                   </Typography>
                 </Box>
               </Stack>
