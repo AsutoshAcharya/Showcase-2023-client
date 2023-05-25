@@ -18,6 +18,7 @@ import {
 } from "react-icons/md";
 import userImg from "../../assets/xavier.jpg";
 import SearchModal from "./SearchModal";
+import AvatarGenerator from "./../../utils/AvatarGenerator";
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -161,10 +162,10 @@ function Navbar() {
           <Tooltip title="Open settings">
             <IconButton onClick={handleOpenUserMenu}>
               <Avatar
-                alt="Remy Sharp"
-                src={userImg}
-                sx={{ height: "1.7rem", width: "1.7rem" }}
-              />
+                sx={{ height: "1.7rem", width: "1.7rem", bgcolor: "blue" }}
+              >
+                {AvatarGenerator("Asutosh ")}
+              </Avatar>
             </IconButton>
           </Tooltip>
 
