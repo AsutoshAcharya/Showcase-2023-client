@@ -2,7 +2,7 @@ import "/src/index.css";
 import React, { useState } from "react";
 
 import ChatStripe from "./ChatStripe";
-
+import { Button } from "@mui/material";
 const Chat = () => {
   const [chatList, setChatlist] = useState([]);
   const [message, setMessage] = useState("");
@@ -42,6 +42,7 @@ const Chat = () => {
   }
 
   const handleSubmit = async (e) => {
+    if (message.length === 0) return;
     const chatContainer = document.querySelector("#chat_container");
     e.preventDefault();
     setChatlist([
@@ -126,9 +127,14 @@ const Chat = () => {
           cols="1"
           placeholder="Chat with recruiter"
         ></textarea>
-        <button type="submit" className="btn" onClick={handleSubmit}>
-          <img src="/src/assets/send.svg" />
-        </button>
+        <Button
+          type="submit"
+          className="btn"
+          onClick={handleSubmit}
+          variant="contained"
+        >
+          send
+        </Button>
       </form>
     </div>
   );
