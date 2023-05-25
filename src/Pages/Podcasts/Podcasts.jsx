@@ -100,7 +100,10 @@ const Podcasts = () => {
       <Grid container spacing={2}>
         {cards.map((card, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
-            <Card sx={{ height: "16rem", boxShadow: 1 }}>
+            <Card sx={{ height: "16rem", boxShadow: 1, ":hover":{
+border:'1px dotted red',
+transform: "scale(1.05)",
+            }, }}>
               <CardContent>
                 <img src={card.img} alt="dd" height="150" width="100%" />
               </CardContent>
