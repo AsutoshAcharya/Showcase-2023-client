@@ -13,6 +13,8 @@ import MoreInfo from "./Pages/Courses/MoreInfo";
 import Login from "./Pages/Login/Login";
 import Chat from "./Pages/Chat/Chat";
 import { Stack } from "@mui/material";
+import SucessPayment from "./Components/payment/SuccessPayment";
+import Cancel from "./Components/Payment/Cancel";
 function App() {
   return (
     <Stack width="100vw" height="100vh">
@@ -28,6 +30,9 @@ function App() {
         <Route path="/courses" element={<Courses />} />
         {/* <Route path={`/details/${id}`} element={<MoreInfo />} /> */}
         <Route path="/podcasts" element={<Podcasts />} />
+        {/* payments  */}
+        <Route path="payment/successful" element={<SucessPayment />} />
+        <Route path="payment/failed" element={<Cancel />} />
       </Routes>
     </Stack>
   );

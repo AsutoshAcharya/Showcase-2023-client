@@ -69,7 +69,7 @@ const Chat = () => {
     //https://weary-rugby-shirt-newt.cyclic.app/chat
     //http://localhost:8800/chat
     const response = await fetch(
-      "https://weary-rugby-shirt-newt.cyclic.app/chat",
+      "https://wide-eyed-cyan-earrings.cyclic.app/chat",
       {
         method: "POST",
         headers: {
